@@ -536,6 +536,78 @@ li {
 .join-icon {
   fill: var(--tertiary-text-color);
 }
+.mailing-container {
+  display: flex;
+  flex-direction: column;
+}
+.mailing-form {
+  display: flex;
+  width: 570px;
+  height: 86px;
+  margin-left: 93px;
+
+  align-items: flex-end;
+}
+.mailing-form label {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--tertiary-text-color);
+  margin-bottom: 20px;
+}
+.mailing-form input {
+  width: 358px;
+  background-color: var(--secondary-bg-color);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+}
+.mailing-form input::placeholder {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.25;
+
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+.mailing-btn {
+  width: 200px;
+  height: 50px;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: var(--tertiary-text-color);
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 29px;
+  padding-right: 0;
+  margin-left: 12px;
+
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+.mailing-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  padding-right: 28px;
+  fill: var(--tertiary-text-color);
+}
 
 /*Portfolio page*/
 
