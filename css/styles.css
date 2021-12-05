@@ -274,6 +274,7 @@ li {
 .close-icon {
   width: 18px;
   height: 18px;
+  transition: fill 250ms linear;
 }
 .close-btn:hover .close-icon {
   fill: var(--accent-color);
@@ -330,6 +331,8 @@ li {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition: border-color 250ms linear;
 }
 .input-name-box {
   width: 100%;
@@ -343,6 +346,7 @@ li {
   fill: var(--secondary-text-color);
 
   transform: translateY(-50%);
+  transition: fill 250ms linear;
 }
 .name-field:hover .name-input,
 .name-field:focus-within .name-input {
@@ -382,6 +386,8 @@ li {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition: border-color 250ms linear;
 }
 .input-tel-box {
   width: 100%;
@@ -395,6 +401,8 @@ li {
   fill: var(--secondary-text-color);
 
   transform: translateY(-50%);
+
+  transition: fill 250ms linear;
 }
 .tel-field:hover .tel-input,
 .tel-field:focus-within .tel-input {
@@ -434,6 +442,8 @@ li {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition: border-color 250ms linear;
 }
 .input-mail-box {
   width: 100%;
@@ -447,6 +457,8 @@ li {
   fill: var(--secondary-text-color);
 
   transform: translateY(-50%);
+
+  transition: fill 250ms linear;
 }
 .mail-field:hover .mail-input,
 .mail-field:focus-within .mail-input {
@@ -456,15 +468,15 @@ li {
 .mail-field:focus-within .icon-mail-modal {
   fill: var(--accent-color);
 }
-.mail-field {
+.comments-field {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 58px;
+  height: 138px;
 
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
-.label-mail {
+.label-comments {
   margin-bottom: 4px;
 
   font-style: normal;
@@ -473,7 +485,7 @@ li {
   line-height: 1.17;
   letter-spacing: 0.01em;
 }
-.mail-input {
+.comments-input {
   display: inline-block;
   width: 100%;
 
@@ -482,29 +494,105 @@ li {
   padding: 0;
   padding-top: 12px;
   padding-bottom: 12px;
-  padding-left: 42px;
+  padding-left: 16px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-}
-.input-comments-box {
-  width: 100%;
-  position: relative;
-}
-.icon-comments-modal {
-  position: absolute;
-  top: 50%;
-  left: 12px;
+  resize: none;
 
-  fill: var(--secondary-text-color);
-
-  transform: translateY(-50%);
+  transition: border-color 250ms linear;
 }
 .comments-field:hover .comments-input,
 .comments-field:focus-within .comments-input {
   border-color: var(--accent-color);
 }
+.comments-input::placeholder {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
 
+  color: rgba(117, 117, 117, 0.5);
+}
+.checkbox-field {
+  display: flex;
+  align-items: center;
+  padding-right: 12px;
+  padding-left: 11px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.icon-checkbox {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+
+  border: 2px solid #2a2a2a;
+  border-radius: 4px;
+
+  transition: border-color 250ms linear, background-image 250ms linear,
+    background-color 250ms linear;
+}
+
+.checkbox:checked + .icon-checkbox {
+  border-color: var(--accent-color);
+  background-color: var(--accent-color);
+  background-image: url("../images/check-icon.svg");
+  background-origin: padding-box;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.label-checkbox {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: var(--primary-text-color);
+}
+.agree-link {
+  text-decoration-line: underline;
+  color: var(--accent-color);
+  text-decoration-skip-ink: none;
+}
+.btn-modal {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: var(--tertiary-text-color);
+
+  cursor: pointer;
+  outline: none;
+  width: 200px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
 /*Features*/
 .features-list {
   display: flex;
@@ -798,6 +886,8 @@ li {
   padding-left: 16px;
   color: var(--tertiary-text-color);
   outline: none;
+
+  transition: border-color 250ms linear;
 }
 .mailing-form input::placeholder {
   font-weight: normal;
@@ -813,6 +903,7 @@ li {
   border-color: var(--accent-color);
 }
 .mailing-btn {
+  outline: none;
   width: 200px;
   height: 50px;
 

@@ -94,12 +94,15 @@
                         </div>
                     </div>
                     <div class="comments-field">
-                        <label class="label-comments" for="comments-field">Почта</label>
-                        <div class="input-mail-box">
-                            <textarea class="mail-input" rows="5" type="text" name="comments" id="comments-field">
-                        </div>
+                        <label class="label-comments" for="comments-field">Комментарий</label>
+                            <textarea class="comments-input" rows="5" type="text" name="comments" id="comments-field" placeholder="Введите текст"></textarea>
                     </div>
-                    
+                    <label class="checkbox-field">
+                        <input class="checkbox" type="checkbox" name="topic" value="agree" />
+                        <span class="icon-checkbox"></span>
+                        <span class="label-checkbox">Соглашаюсь с рассылкой и принимаю <a href="" class="agree-link">Условия договора</a></span>
+                    </label>
+                    <button class="btn-modal" type="submit">Отправить</button>  
                 </form>
             </div>
         </div>
